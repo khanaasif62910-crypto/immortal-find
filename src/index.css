@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@keyframes subtleEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes subtlePulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 0px rgba(99, 102, 241, 0);
+    box-shadow: 0 0 0px rgba(99, 102, 241, 0);
+  }
+  50% {
+    text-shadow: 0 0 14px rgba(165, 180, 252, 0.9);
+    box-shadow: 0 0 18px rgba(99, 102, 241, 0.5);
+  }
+}
+
+.animate-subtle-entrance {
+  display: inline-block;
+  animation: subtleEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) forwards, subtlePulseGlow 3s ease-in-out infinite 1s;
+}
+

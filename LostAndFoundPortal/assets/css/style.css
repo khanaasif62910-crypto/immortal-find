@@ -1,0 +1,164 @@
+/* ============================================================
+   Lost and Found Portal - Main Stylesheet
+   Design Language: Modern Glassmorphism, Clean Spacing, Responsive Cards
+   ============================================================ */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #475569;
+    --accent-lost: #ef4444;
+    --accent-found: #10b981;
+    --dark-bg: #0f172a;
+    --card-bg: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --body-font: 'Plus Jakarta Sans', sans-serif;
+    --heading-font: 'Outfit', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    color: #334155;
+    background-color: #f8fafc;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-text {
+    font-family: var(--heading-font);
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* Gradient Hero Section */
+.hero-gradient {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, rgba(0,0,0,0) 70%);
+    top: -50px;
+    right: -50px;
+    border-radius: 50%;
+}
+
+/* Custom Badges */
+.badge-lost {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+    font-weight: 600;
+}
+
+.badge-found {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+    font-weight: 600;
+}
+
+/* Gradient Buttons */
+.btn-gradient-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient-primary:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Image Item Aspect Ratio Box */
+.item-img-container {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #f1f5f9;
+}
+
+.item-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.glass-card:hover .item-img-container img {
+    transform: scale(1.05);
+}
+
+/* Dashboard Stat Cards */
+.stat-card {
+    border-radius: 16px;
+    padding: 1.5rem;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card .stat-icon {
+    font-size: 2.5rem;
+    opacity: 0.25;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+/* Form Styles */
+.form-control:focus, .form-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* Responsive Table */
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.custom-table tr {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.custom-table td, .custom-table th {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+/* Utilities */
+.hover-white:hover {
+    color: #ffffff !important;
+}
+
+.image-preview-box {
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 12px;
+}

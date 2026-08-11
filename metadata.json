@@ -1,0 +1,6 @@
+{
+  "name": "Lost and Found Portal",
+  "description": "A complete, production-ready Lost and Found Portal web application for BCA Final Year Mini Project using PHP 8, MySQL, Bootstrap 5, and Font Awesome.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
